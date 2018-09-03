@@ -2,12 +2,12 @@
 This module lets you practice correcting SYNTAX (notation) errors.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Gerardo Santana.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# Done: 2.
 #   Locate the syntax (notation) errors in this file
 #   by looking for red underlines.
 #
@@ -32,21 +32,23 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 ###############################################################################
 
 import rosegraphics as rg
+import math as m
 
 
 def main():
     """ Calls the other functions in this module to demo them. """
     print_math()
-    tutle_fn()
+    turtle_fun()
 
 
-def print_math:
+def print_math():
     """ Prints some calculated values. """
-    x = cos(pi)
+    pi = 3.141592653589793238
+    x = m.cos(pi)
     print(x)
 
-    y = sin(pi)
-    print(The sine of PI is, y)
+    y = m.sin(pi)
+    print(m.sin(pi), y)
 
 
 def turtle_fun():
@@ -55,20 +57,20 @@ def turtle_fun():
     constructs a classic SimpleTurtle and asks it to do some things,
     and waits for the user to click anywhere in the window to close it.
     """
-    window = rg.TurtleWindow()
+window = rg.TurtleWindow()
 
-    alan = rg.SimpleTurtle()
+alan = rg.SimpleTurtle('turtle')
 alan.pen = rg.Pen('blue', 30)
-    alan.paint_bucket = rg.PaintBucket('yellow')
+alan.paint_bucket = rg.PaintBucket('yellow')
 
-    alan.back(3 * (47 + 16)
-    al.begin_fill()
-    alan.circle(25)
-    alan.end_fill()
+alan.backward(189)
+alan.begin_fill()
+alan.draw_circle(25)
+alan.end_fill()
 
-    forward(200)
+alan.forward(200)
 
-    window.close_on_mouse_click()
+window.close_on_mouse_click()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
