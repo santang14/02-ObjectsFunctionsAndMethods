@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and Vibha Alangar.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Vibha Alangar. Gerardo Santana
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# Read: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 # Part 1:  CONSTRUCTING objects, applying ** METHODS ** to them:
@@ -54,7 +54,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 #   in a way that is similar to how we call METHODS,
 #   but WITHOUT the DOT notation.  For example
 #      def main():
-#          turtle3()
+#          turtle3('blue', 5)
 #
 #   Run this module and review the existing code.
 #   Can you identify the functions calls and methods calls?
@@ -81,7 +81,7 @@ def main():
     turtle = rg.SimpleTurtle('square')
     draw_many_squares(turtle, 3, 75, 15)
 
-    turtle3()
+    turtle3('blue', 5)
 
     ###########################################################################
     # When the TODOs ask you to test YOUR code, put YOUR tests below this:
@@ -181,10 +181,16 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function, per its doc-string above.
+    # Done: 3. Implement and test this function, per its doc-string above.
     #     (To test it, put a statement in   main   that calls this function.)
     ###########################################################################
-
+window = rg.TurtleWindow()
+gerardo = rg.SimpleTurtle('turtle')
+gerardo.pen = rg.Pen('brown', 5)
+gerardo.forward(150)
+gerardo.left(90)
+gerardo.forward(50)
+gerardo.backward(100)
 
 def try_functions():
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
@@ -195,7 +201,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # Done: 4. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #    NOTE: This function requires
@@ -204,7 +210,9 @@ def try_functions():
     #    HINT: see   jump_and_move_turtle   above.
     #
     ###########################################################################
-
+jump_and_move_turtle(200, 100, 300,30)
+jump_and_move_turtle(100, 200, 0, 0)
+jump_and_move_turtle(-50, 50, 100, 100)
 
 def try_methods_and_functions():
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
@@ -240,7 +248,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # done: 5. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #   NOTE: This function should ** CALL ** the
@@ -248,6 +256,23 @@ def try_methods_and_functions():
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     #
     ###########################################################################
+window = rg.TurtleWindow()
+santana = rg.SimpleTurtle('turtle')
+santana.pen = rg.Pen('blue', 5)
+santana.speed = 1
+draw_many_squares(santana, 2, 100, 30)
+santana.speed = 5
+santana.pen = rg.Pen('red', 5)
+draw_many_squares(santana, 10, 50, 15)
+santana.speed = 100
+santana.pen = rg.Pen('red', 35)
+draw_many_squares(santana, 8, 300, 60)
+santana.pen = rg.Pen('black', 3)
+santana.backward(200)
+santana.draw_circle(30)
+draw_many_squares(santana, 1, 50, 0)
+
+
 
 
 # -----------------------------------------------------------------------------
